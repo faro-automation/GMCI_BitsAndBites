@@ -1,0 +1,91 @@
+[
+{
+    "meats": {
+        "title": "Hähnchen Curry mit Reis",
+        "category": "Meat",
+        "ingredients": ["poultry", "gluten", "milk"],
+        "photo": "img/meat.jpg",
+        "nutritional_value": {
+            "caloric_content": 763,
+            "proteins": 32,
+            "fats": 32,
+            "saturated_fatty_acids": 13, 
+            "carbohydrates": 88,
+            "sugars": 9, 
+            "salt": 2.1  
+        }
+    }
+},
+
+{
+    "vegan": {
+        "title": "Chili sin Carne mit Reis",
+        "category": "Vegan",
+        "ingredients": ["vegan", "gluten"],
+        "photo": "img/vegan.jpg",
+        "nutritional_value": {
+            "caloric_content": 507,
+            "proteins": 29,
+            "fats": 12,
+            "saturated_fatty_acids": 4, 
+            "carbohydrates": 67,
+            "sugars": 12, 
+            "salt": 2.3  
+        }
+    }
+},
+
+{
+    "pasta": {
+        "title": "Schweinschnitzel mit Pommes",
+        "category": "Evergreens",
+        "ingredients": ["pork"],
+        "photo": "img/evergreens.jpg",
+        "nutritional_value": {
+            "caloric_content": 986,
+            "proteins": 42,
+            "fats": 38,
+            "saturated_fatty_acids": 24, 
+            "carbohydrates": 89,
+            "sugars": 9, 
+            "salt": 1.5  
+        }
+    }
+},
+
+{
+    "pasta": {
+        "title": "Spaghetti Bolognese",
+        "category": "Pasta",
+        "ingredients": ["pork", "gluten"],
+        "photo": "img/pasta.jpg",
+        "nutritional_value": {
+            "caloric_content": 516,
+            "proteins": 25,
+            "fats": 15,
+            "saturated_fatty_acids": 7, 
+            "carbohydrates": 60,
+            "sugars": 4, 
+            "salt": 1.5  
+        }
+    }
+},
+
+{
+    "sweets": {
+        "title": "Vanillepudding mit Schokoladensauce",
+        "category": "Sweets",
+        "ingredients": ["milk", "gluten"],
+        "photo": "img/sweets.jpg",
+        "nutritional_value": {
+            "caloric_content": 478,
+            "proteins": 12,
+            "fats": 23,
+            "saturated_fatty_acids": 13, 
+            "carbohydrates": 56,
+            "sugars": 40, 
+            "salt": 0.5  
+        }
+    }
+}
+]
