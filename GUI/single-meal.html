@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calories Progress</title>
+    <title>Single meal</title>
     <link rel="stylesheet" href="styles.css">
-	<script defer src="script.js"></script>
 </head>
 <body>
 
-<div class="circle-container">
-    <div class="circle">
-		<div class="inner">
-			<div class="bar">
-				<div id="number">500 kcal</div>
+	<div class="meal-container" id="1a">
+		<img src="img/pasta.jpg" alt="Meal 1" class="meal-photo">
+		<div id="1a" class="meal-title">Spaghetti Bolognese</div>
+		<div class="meal-ingredients" id = "1a">
+			<span title="Tomato" class="ingredient-icon">🍅</span>
+			<span title="Beef" class="ingredient-icon">🥩</span>
+		</div>
+		<div class="meal-nutrition" id = "1a">
+			<div>
+
+				<div class="circle-container">
+					<div class="circle">
+							<div class="bar">
+								<div id="number">600</div>
+							</div>
+					</div>
+				</div>
+
 			</div>
 		</div>
+		<button class="meal-info-button">Info</button>
 	</div>
-</div>
 
+	<script src="script.js"></script>
 
 </body>
 </html>
