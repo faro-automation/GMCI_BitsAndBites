@@ -7,15 +7,23 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+Language choice doesn't do anything as of now, just use the JS code to alter the language.
+	<select name="language" id="language" onchange="inputHandler()">
+		<option value="EN">EN</option>
+		<option value="DE">DE</option>
+		<option value="Multi">Multi</option>
+	</select>
+Use VS Code live preview. JSON can only be fetched from the server, Chrome doesn't set it up by default! You won't see anything in a regular browser.
+	<div class="meal-container" id = "meats">
 
-	<div class="meal-container" id="1a">
-		<img src="img/pasta.jpg" alt="Meal 1" class="meal-photo">
-		<div id="1a" class="meal-title">Spaghetti Bolognese</div>
-		<div class="meal-ingredients" id = "1a">
-			<span title="Tomato" class="ingredient-icon">🍅</span>
-			<span title="Beef" class="ingredient-icon">🥩</span>
+		<img src="img/pasta.jpg" class="meal-photo">
+		<div class="meal-ingredients">
 		</div>
-		<div class="meal-nutrition" id = "1a">
+
+		<div id="1a" class="meal-title">Title 1a</div>
+		<div id="1a" class="meal-prices">Price</div>
+
+		<div class="meal-nutrition">
 			<div>
 
 				<div class="circle-container">
@@ -28,9 +36,35 @@
 
 			</div>
 		</div>
-		<button class="meal-info-button">Info</button>
+		<button class="info-button"></button>
 	</div>
 
+<br>
+
+<div class="meal-container" id = "vegan">
+
+	<img src="img/pasta.jpg" class="meal-photo">
+	<div class="meal-ingredients">
+	</div>
+
+	<div id="1a" class="meal-title">Title 2a</div>
+	<div id="1a" class="meal-prices">Price</div>
+
+	<div class="meal-nutrition">
+		<div>
+
+			<div class="circle-container">
+				<div class="circle">
+						<div class="bar">
+							<div id="number">600</div>
+						</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<button class="info-button"></button>
+</div>
 	<script src="script.js"></script>
 
 </body>

@@ -1,9 +1,11 @@
 [
 {
     "title": "Hähnchen Curry mit Reis",
+    "title_en": "Chicken Curry with Rice",
     "category": "Meat",
     "ingredients": ["poultry", "gluten", "milk"],
     "photo": "img/meat.jpg",
+    "prices": [3.20, 5.80, 6.20],
     "nutritional_value": {
         "caloric_content": 763,
         "proteins": 32,
@@ -17,9 +19,11 @@
 
 {
     "title": "Chili sin Carne mit Reis",
+    "title_en": "Chili sin Carne with Rice",
     "category": "Vegan",
     "ingredients": ["vegan", "gluten"],
     "photo": "img/vegan.jpg",
+    "prices": [3.00, 5.40, 6.00],
     "nutritional_value": {
         "caloric_content": 507,
         "proteins": 29,
@@ -33,9 +37,11 @@
 
 {
     "title": "Schweinschnitzel mit Pommes",
+    "title_en": "Pork Schnitzel with French Fries",
     "category": "Evergreens",
     "ingredients": ["pork"],
     "photo": "img/evergreens.jpeg",
+    "prices": [4.20, 6.80, 7.40],
     "nutritional_value": {
         "caloric_content": 986,
         "proteins": 42,
@@ -49,9 +55,11 @@
 
 {
     "title": "Spaghetti Bolognese",
+    "title_en": "Spaghetti Bolognese",
     "category": "Pasta",
     "ingredients": ["pork", "gluten"],
     "photo": "img/pasta.jpg",
+    "prices": [1.60, 3.70, 4.10],
     "nutritional_value": {
         "caloric_content": 516,
         "proteins": 25,
@@ -65,9 +73,11 @@
 
 {
     "title": "Vanillepudding mit Schokoladensauce",
+    "title_en": "Vanilla Pudding with Chocolate Dressing",
     "category": "Sweets",
     "ingredients": ["milk", "gluten"],
     "photo": "img/sweets.jpg",
+    "prices": [0.80, 1.50, 2.00],
     "nutritional_value": {
         "caloric_content": 478,
         "proteins": 12,

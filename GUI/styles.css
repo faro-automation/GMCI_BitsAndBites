@@ -10,6 +10,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+	flex-direction: column;
 	background-color: rgb(255, 255, 255);
 	font-family: 'Gabarito', sans-serif;
 }
@@ -19,34 +20,71 @@ MEAL CONTAINTERS
 */
 
 .meal-container {
+	--bg-color: rgb(241, 241, 241);
+	--primary-color: rgb(153, 153, 153);
+	--primary-color-hover: rgb(120, 120, 120);
+	--secondary-color: rgb(212, 212, 212);
 	display: grid;
 	grid-template-columns: 1.5fr 1fr 0.5fr;
-	grid-template-rows: 0.5fr repeat(3, 1fr);
+	grid-template-rows: 0.5fr 1fr 0.5fr 1fr;
 	grid-column-gap: 0px;
 	grid-row-gap: 0px;
-	border: 1px solid #eb7171;
-	background-color:rgb(249, 179, 179);
-	border-radius: 10px;
+	background-color: var(--bg-color);
+	border-radius: 3px;
 	margin: 10px;
-	padding: 10px;
+	padding: 0px;
 	display: grid;
 	width: 400px;
-	height: 200px;
+	height: 180px;
+	overflow: hidden;
 	}
 
 .meal-photo { grid-area: 1 / 1 / 5 / 2; }
 .meal-ingredients { grid-area: 1 / 2 / 2 / 4; }
-.meal-title { grid-area: 2 / 2 / 4 / 4; }
+.meal-title { grid-area: 2 / 2 / 3 / 4; }
+.meal-prices { grid-area: 3 / 2 / 4 / 4; }
 .meal-nutrition { grid-area: 4 / 2 / 5 / 3; }
 .meal-info-button { grid-area: 4 / 3 / 5 / 4; }
 
+.meal-container[id = "meats"] {
+	--bg-color: rgb(249, 179, 179);
+	--primary-color: rgb(123, 22, 22);
+	--primary-color-hover: rgb(62, 10, 10);
+	--secondary-color: rgb(225, 139, 139);
+}
+
+.meal-container[id = "vegan"] {
+	--bg-color:rgb(196, 249, 184);
+	--primary-color: rgb(22, 123, 69);
+	--primary-color-hover: rgb(10, 62, 26);
+	--secondary-color: rgb(145, 219, 143);
+}
+
+.meal-container[id = "evergreens"] {
+	--bg-color:rgb(149, 203, 250);
+	--primary-color: rgb(19, 99, 175);
+	--primary-color-hover: rgb(22, 58, 136);
+	--secondary-color: rgb(121, 166, 224);
+}
+
+.meal-container[id = "pasta"] {
+	--bg-color:rgb(249, 227, 184);
+	--primary-color: rgb(221, 146, 40);
+	--primary-color-hover: rgb(177, 115, 14);
+	--secondary-color: rgb(233, 202, 120);
+}
+
+.meal-container[id = "sweets"] {
+	--bg-color:rgb(249, 184, 238);
+	--primary-color: rgb(223, 69, 169);
+	--primary-color-hover: rgb(184, 23, 128);
+	--secondary-color: rgb(243, 146, 220);
+}
 
 .meal-photo {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	border-radius: 5px;
-	border: 1px solid rgb(145, 6, 6);
 }
 
 .meal-ingredients {
@@ -60,17 +98,19 @@ MEAL CONTAINTERS
 	font-weight: 800;
 	margin-top: 10px;
 	margin-left: 5px;
+	margin-right: 5px;
 }
 
 .meal-nutrition {
-	display: grid;
-	margin-top: 10px;
 	margin-left: 5px;
-	font-size: 0.8em;
+}
+
+.meal-prices{
+	margin-left: 5px;
 }
 
 .meal-info-button {
-	margin-top: 10px;
+ /*probably best replaced by the info-button class*/
 }
 
 /*
@@ -78,6 +118,7 @@ CIRCLE CONTAINER
 */
 
 .meal-nutrition .circle-container {
+	position: relative;
 	width: 50px;
 	height: 50px;
     display: flex;
@@ -103,7 +144,7 @@ CIRCLE CONTAINER
 	left: 0;
 	height: 100%;
 	width: 100%;
-	background: conic-gradient(rgb(134, 24, 10) 40%, rgb(220, 140, 140) 0);
+	background: conic-gradient(var(--primary-color) 40%, var(--secondary-color) 0);
 	-webkit-mask: radial-gradient(#0000 50%, #000 0);
 	-webkit-mask-mode: alpha;
 }
@@ -111,4 +152,30 @@ CIRCLE CONTAINER
 #number {
 	font-weight: 800;
 	font-size: 1rem;
+}
+
+/*
+INFO BUTTON
+*/
+.info-button {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	background-color: var(--primary-color);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border: none;
+}
+
+.info-button::before {
+	content: url('img/info-arrow.svg');
+	position: absolute;
+	top: 0;
+}
+
+.info-button:hover {
+	background-color: var(--primary-color-hover);
 }
