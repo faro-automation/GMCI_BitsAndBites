@@ -1,0 +1,42 @@
+{
+"icons": [
+{	"id": "milk",
+	"name_de": "Milch",
+	"name_en":"Milk",
+	"url": "https://icon-library.com/images/milk-icon/milk-icon-12.jpg"
+}
+{	"id": "gluten",
+	"name_de": "Gluten",
+	"name_en": "Gluten",
+	"url": "https://cdn3.iconfinder.com/data/icons/food-product-labels/128/contains-gluten-512.png"
+}
+{	"id": "poultry",
+	"name_de": "Geflügel",
+	"name_en": "Poultry",
+	"url": "https://th.bing.com/th/id/R.34e8c885abc44740aea9690f32132507?rik=UWRDkJybJ%2bp1hg&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_431194.png&ehk=vAa0JLzNldo6ajngohpKBJ0JA8PBIdsjzveT%2bzUSG8s%3d&risl=&pid=ImgRaw&r=0"
+}
+{	"id": "pork",
+	"name_de": "Schwein",
+	"name_en": "Pork",
+	"url": "https://www.pngkit.com/png/detail/314-3141429_12-emoji-pig-pork-icon-free.png"
+}
+{	"id": "beef",
+	"name_de": "Rind",
+	"name_en": "Beef",
+	"url": "https://creazilla-store.fra1.digitaloceanspaces.com/icons/3256142/cow-icon-md.png"
+}
+{	"id": "mustard",
+	"name_de":"Senf",
+	"name_en": "mustard",
+	"url": "https://cdn4.iconfinder.com/data/icons/remy-1/128/mustard-1024.png"
+}
+{	"id": "alcohol",
+	"name_de": "Alkohol",
+	"name_en": "Alcohol",
+	"url": "https://cdn2.iconfinder.com/data/icons/gastronomy-44/100/alcohol-1024.png"
+}
+{	"id": "vegan"
+	"name_de": "Vegan",
+	"name_en": "Vegan",
+	"url": "https://www.pngall.com/wp-content/uploads/8/Vegan-Logo-PNG-Free-Download.png"
+}
