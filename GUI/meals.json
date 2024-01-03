@@ -1,5 +1,6 @@
 [
 {
+    "position": "1a",
     "title": "Hähnchen Curry mit Reis",
     "title_en": "Chicken Curry with Rice",
     "category": "Meat",
@@ -18,6 +19,7 @@
 },
 
 {
+    "position": "1b",
     "title": "Chili sin Carne mit Reis",
     "title_en": "Chili sin Carne with Rice",
     "category": "Vegan",
@@ -36,6 +38,7 @@
 },
 
 {
+    "position": "1c",
     "title": "Schweinschnitzel mit Pommes",
     "title_en": "Pork Schnitzel with French Fries",
     "category": "Evergreens",
@@ -54,6 +57,7 @@
 },
 
 {
+    "position": "1d",
     "title": "Spaghetti Bolognese",
     "title_en": "Spaghetti Bolognese",
     "category": "Pasta",
@@ -72,6 +76,7 @@
 },
 
 {
+    "position": "1e",
     "title": "Vanillepudding mit Schokoladensauce",
     "title_en": "Vanilla Pudding with Chocolate Dressing",
     "category": "Sweets",
@@ -87,6 +92,24 @@
         "sugars": 40, 
         "salt": 0.5  
     }
-}
+},
 
+{
+    "position": "2a",
+    "title": "Rinderrouladen",
+    "title_en": "Rinderrouladen",
+    "category": "Meat",
+    "ingredients": ["beef"],
+    "photo": "img/meat.jpg",
+    "prices": [3.20, 5.80, 6.20],
+    "nutritional_value": {
+        "caloric_content": 763,
+        "proteins": 32,
+        "fats": 32,
+        "saturated_fatty_acids": 13, 
+        "carbohydrates": 88,
+        "sugars": 9, 
+        "salt": 2.1  
+    }
+}
 ]
