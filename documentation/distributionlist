@@ -1,10 +1,9 @@
 ^ Nr. ^ Task ^ Assignee ^ 
-|  1  | Set up GitHub Repository | Ronja Fändrich |
-|  2  | Create GUI prototype  |  |
-|  2a  |   |  |
-|  2b  |   |  |
-|  2c  |   |  |
-|  3  | Create WoOZ simulation for prototype |  |
-|  3a  |   |  |
-|  3b  |   |  |
-|  3c  |   |  |
+|  1  | Create GUI prototype | whole group |
+|  1a  | Set up GitHub Repository  | Ronja Fändrich |
+|  1b  | Programming structure and functionality | Sasha Hryhorovych |
+|  1c  | Setup Layout and digital design | Nicole Reichert, Yannis Boländer |
+|  1d  | Get icons for mealproperties | Teresa Gehlmann |
+|  1e  | Add multiple mealdata | Teresa Gehlmann |
+|  1f  | Size adaption of the display to the window | Ronja Fändrich |
+|  1g  | Splitscreen (startetd but not finished) | Ronja Fändrich |
