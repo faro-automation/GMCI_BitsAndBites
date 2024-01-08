@@ -91,7 +91,7 @@ function updateFields(data, init) {
                 var imgElement = document.createElement('img');
         
                 // Set the src attribute to the corresponding SVG file
-                imgElement.src = '/icons/' + ingredient + '.png';
+                imgElement.src = './icons/' + ingredient + '.png';
         
                 // Set any additional attributes or styles if needed
                 imgElement.alt = ingredient;
