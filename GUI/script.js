@@ -22,6 +22,8 @@ var RDI = {
     carbs: "#cf9136",
     sugar: "#cf3699"
   };
+
+  var splitactive = false;
   
 
 
@@ -463,3 +465,69 @@ function reverseMapValues(value) {
         return "error";
     }
 }
+
+
+function splitscreen() {
+    console.log("splitscreen")
+     if (splitactive) {
+        scaleDisplay(0.5)
+        document.getElementById("iframe").style.width = "50%";
+        document.getElementById("iframe").style.height = "100%";
+        document.getElementById("iframe").style.position = "absolute";
+        document.getElementById("iframe").style.top = 0; 
+        document.getElementById("iframe").style.right = 0;
+    } else {
+        document.getElementById("iframe").style.width = "0%";
+        document.getElementById("iframe").style.height = "0%"; 
+        scaleDisplay(1.0)
+    } 
+}
+
+function scaleDisplay(widthfactor) {
+    var toFullWidth = true;
+    widthfactor = parseFloat(widthfactor);
+    if (widthfactor > 0.0) {
+        var screenWidth = window.innerWidth * widthfactor;
+    } else {
+        var screenWidth = window.innerWidth;
+    }
+    var screenHeight = window.innerHeight;
+    var containerWidth = 1150;
+    var containerHeight = 1040;
+    if (toFullWidth) {
+        var scale = ((screenWidth) / containerWidth);
+    } else {
+        var scale = Math.min((screenWidth / containerWidth), (screenHeight / containerHeight));
+    }
+    document.getElementById("grid-container").style.transform = "scale(" + scale + ")"; 
+    var widthCorrection = ((containerWidth * scale  - containerWidth) /2) +10;
+    var heightCorrection = ((containerHeight * scale - containerHeight) /2) +10;
+    document.getElementById("grid-container").style.position = "absolute";
+    document.getElementById("grid-container").style.top = heightCorrection + "px"; // Set the top position relative to the window
+    document.getElementById("grid-container").style.left = widthCorrection + "px"; // Set the left position relative to the window
+    console.log("sw " + screenWidth + " sh " + screenHeight +  " s " + scale +  " w " + widthfactor + " ifr " + document.getElementById("iframe").style.width);
+}   
+window.addEventListener("resize", function() { 
+    console.log("resize")
+    if (splitactive) {
+    } else {
+        scaleDisplay(1.0); 
+    } 
+    });    
+window.addEventListener("load", function() { 
+    console.log("load")
+    if (splitactive) {
+        if (document.getElementById("iframe").style.width != "50%") {
+            console.log("iframewidth: " + document.getElementById("iframe").style.width)
+            splitscreen();
+        } else {
+            scaleDisplay(0.5);
+        }
+    } else {
+        scaleDisplay(1.0);
+    } 
+});
+
+
+
+
