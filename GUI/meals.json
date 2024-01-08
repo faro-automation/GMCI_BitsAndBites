@@ -3,14 +3,12 @@
     "position": "1a",
     "title": "Hähnchen Curry mit Reis",
     "title_en": "Chicken Curry with Rice",
-    "category": "fleisch und meer",
+    "category": "Meat",
     "ingredients": ["poultry", "gluten", "milk"],
-    "ingredients_string": "Hähnchen, Curry, Kokosmilch, Reis",
-    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [3.20, 5.80, 6.20],
     "nutritional_value": {
-        "caloric_content": 832,
+        "caloric_content": 763,
         "proteins": 32,
         "fats": 32,
         "saturated_fatty_acids": 13, 
@@ -24,10 +22,8 @@
     "position": "1b",
     "title": "Chili sin Carne mit Reis",
     "title_en": "Chili sin Carne with Rice",
-    "category": "veggie und vegan",
+    "category": "Vegan",
     "ingredients": ["vegan", "gluten"],
-    "ingredients_string": "Kidneybohnen, Mais, Paprika, Karotten, Zwiebel, Tomatenmark, Salz, Reis",
-    "allergens": "Gluten",
     "photo": "img/vegan.jpg",
     "prices": [3.00, 5.40, 6.00],
     "nutritional_value": {
@@ -45,7 +41,7 @@
     "position": "1c",
     "title": "Schweinschnitzel mit Pommes",
     "title_en": "Pork Schnitzel with French Fries",
-    "category": "evergreens",
+    "category": "Evergreens",
     "ingredients": ["pork"],
     "photo": "img/evergreens.jpeg",
     "prices": [4.20, 6.80, 7.40],
@@ -64,7 +60,7 @@
     "position": "1d",
     "title": "Spaghetti Bolognese",
     "title_en": "Spaghetti Bolognese",
-    "category": "pasta",
+    "category": "Pasta",
     "ingredients": ["pork", "gluten"],
     "photo": "img/pasta.jpg",
     "prices": [1.60, 3.70, 4.10],
@@ -83,7 +79,7 @@
     "position": "1e",
     "title": "Vanillepudding mit Schokoladensauce",
     "title_en": "Vanilla Pudding with Chocolate Dressing",
-    "category": "süße ecke",
+    "category": "Sweets",
     "ingredients": ["milk", "gluten"],
     "photo": "img/sweets.jpg",
     "prices": [0.80, 1.50, 2.00],
@@ -103,7 +99,7 @@
     "title": "Rinderrouladen",
     "title_en": "Rinderrouladen",
     "category": "Meat",
-    "ingredients": ["milk"],
+    "ingredients": ["beef"],
     "photo": "img/meat.jpg",
     "prices": [3.20, 5.80, 6.20],
     "nutritional_value": {
@@ -114,6 +110,347 @@
         "carbohydrates": 88,
         "sugars": 9, 
         "salt": 2.1  
+    }
+},{
+    "position": "2b",
+    "title": "Salatteller, hausgemachtes pflanzliches cremiges Dressing, Vegane Nuggets, Chili Jam, Weizenbaguette",
+    "title_en": "Salad plate, homemade plant-based creamy dressing, vegan nuggets, chili jam, wheat baguette",
+    "category": "Vegan",
+    "ingredients": ["gluten","mustard","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [3.00, 6.30, 7.90],
+    "nutritional_value": {
+        "caloric_content": 644,
+        "proteins": 26.1,
+        "fats": 23.9,
+        "saturated_fatty_acids": 2.4, 
+        "carbohydrates": 78.2,
+        "sugars": 45.3, 
+        "salt": 2.8  
+    }
+},
+{
+    "position": "2c",
+    "title": "Hausgemachte Pizza mit Brokkoli und Hollandaise",
+    "title_en": "Homemade pizza with broccoli and hollandaise",
+    "category": "Evergreens",
+    "ingredients": ["gluten","milk"],
+    "photo": "img/meat.jpg",
+    "prices": [4.95, 6.90, 7.90],
+    "nutritional_value": {
+        "caloric_content": 762,
+        "proteins": 32.4,
+        "fats": 25.3,
+        "saturated_fatty_acids": 11.8, 
+        "carbohydrates": 90.1,
+        "sugars": 11.7, 
+        "salt": 3.3  
+    }
+},
+{
+    "position": "2d",
+    "title": "Hausgemachte Pasta, alla Norma",
+    "title_en": "Homemade pasta, alla Norma",
+    "category": "Pasta",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [4.95, 6.90, 6.40],
+    "nutritional_value": {
+        "caloric_content": 780,
+        "proteins": 23.8,
+        "fats": 16.3,
+        "saturated_fatty_acids": 1.6, 
+        "carbohydrates": 13.2,
+        "sugars": 14.3, 
+        "salt": 1.4  
+    }
+},
+{
+    "position": "2e",
+    "title": "Weiße Schokoladen-Orangen-Quarkspeise mit Früchten",
+    "title_en": "White chocolate-orange-curd dessert with fruit",
+    "category": "Sweets",
+    "ingredients": ["milk"],
+    "photo": "img/meat.jpg",
+    "prices": [0.80, 1.30, 1.70],
+    "nutritional_value": {
+        "caloric_content": 203,
+        "proteins": 11.6,
+        "fats": 3.2,
+        "saturated_fatty_acids": 1.7, 
+        "carbohydrates": 27,
+        "sugars": 26.5, 
+        "salt": 0.1  
+    }
+},
+{
+    "position": "3a",
+    "title": "Backschinken vom Schwein, Bratensauce, Wirsing, Rösti",
+    "title_en": "Baked pork ham, gravy, savoy cabbage, rösti",
+    "category": "Meat",
+    "ingredients": ["pork","beef","alcohol"],
+    "photo": "img/meat.jpg",
+    "prices": [3.20, 6.50, 8.10],
+    "nutritional_value": {
+        "caloric_content": 792,
+        "proteins": 43.8,
+        "fats": 30.5,
+        "saturated_fatty_acids": 4.7, 
+        "carbohydrates": 80.7,
+        "sugars": 25.9, 
+        "salt": 6.6  
+    }
+},
+{
+    "position": "3b",
+    "title": "Rote Bete-Bulgur Frikadelle, Schnittlauchsauce, Blumenkohl, Salzkartoffeln",
+    "title_en": "Beet-bulgur-meatball, chive sauce, cauliflower, boiled potatoes",
+    "category": "Vegan",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [3.00, 6.30, 7.90],
+    "nutritional_value": {
+        "caloric_content": 641,
+        "proteins": 17.1,
+        "fats": 18.1,
+        "saturated_fatty_acids": 1.9, 
+        "carbohydrates": 93.8,
+        "sugars": 11.2, 
+        "salt": 6.1  
+    }
+},
+{
+    "position": "3c",
+    "title": "Marinierte Hähnchenprust, Barbecesauce, Mais, Kräuterreis",
+    "title_en": "Marinated chicken breast, barbecue sauce, corn, herb rice",
+    "category": "Evergreens",
+    "ingredients": ["poultry","gluten","milk"],
+    "photo": "img/meat.jpg",
+    "prices": [2.50, 6.50, 8.10],
+    "nutritional_value": {
+        "caloric_content": 764,
+        "proteins": 44.4,
+        "fats": 18.7,
+        "saturated_fatty_acids": 1.6, 
+        "carbohydrates": 109.9,
+        "sugars": 15.1, 
+        "salt": 5.6  
+    }
+},
+{
+    "position": "3d",
+    "title": "Hausgemachte Pasta, Brokkoli-Mandel-Sauce",
+    "title_en": "Homemade pasta, broccoli and almond sauce",
+    "category": "Pasta",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [1.60, 4.50, 6.40],
+    "nutritional_value": {
+        "caloric_content": 787,
+        "proteins": 26.2,
+        "fats": 17.5,
+        "saturated_fatty_acids": 1.6, 
+        "carbohydrates": 128.2,
+        "sugars": 5.5, 
+        "salt": 1.1  
+    }
+},
+{
+    "position": "3e",
+    "title": "Chia-Pudding, Pfirsich-Maracuja-Kompott",
+    "title_en": "Chia pudding, peach and passion fruit compote",
+    "category": "Sweets",
+    "ingredients": ["vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [0.80, 1.30, 1.70],
+    "nutritional_value": {
+        "caloric_content": 252,
+        "proteins": 4.8,
+        "fats": 16.4,
+        "saturated_fatty_acids": 11.1, 
+        "carbohydrates": 18.3,
+        "sugars": 17.2, 
+        "salt": 0.1  
+    }
+},
+{
+    "position": "4a",
+    "title": "Rindergulasch mit Paprika und Champignons, Hasugemachte Pasta",
+    "title_en": "Beef goulash with peppers and mushrooms, homemade pasta",
+    "category": "Meat",
+    "ingredients": ["beef","gluten","alcohol"],
+    "photo": "img/meat.jpg",
+    "prices": [3.20, 6.50, 8.10],
+    "nutritional_value": {
+        "caloric_content": 647,
+        "proteins": 46.8,
+        "fats": 8.1,
+        "saturated_fatty_acids": 3, 
+        "carbohydrates": 93.2,
+        "sugars": 11.8, 
+        "salt": 2.1  
+    }
+},
+{
+    "position": "4b",
+    "title": "Falafel, scharfe Tomatensauce, mediteranes Gemüse, Dattel Couscous",
+    "title_en": "Falafel, spicy tomato sauce, mediterranean vegetables, date couscous",
+    "category": "Vegan",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [2.50, 6.30, 7.90],
+    "nutritional_value": {
+        "caloric_content": 822,
+        "proteins": 26.2,
+        "fats": 34.8,
+        "saturated_fatty_acids": 4.7, 
+        "carbohydrates": 93.5,
+        "sugars": 19.1, 
+        "salt": 3.5  
+    }
+},
+{
+    "position": "4c",
+    "title": "Frisches Putenschnitzel, Chili-Hollandaise, Pommes frites",
+    "title_en": "Fresh turkey escalope, chili hollandaise, French fries",
+    "category": "Evergreens",
+    "ingredients": ["gluten","milk","poultry"],
+    "photo": "img/meat.jpg",
+    "prices": [4.20, 6.00, 7.80],
+    "nutritional_value": {
+        "caloric_content": 1387,
+        "proteins": 232.6,
+        "fats": 109.9,
+        "saturated_fatty_acids": 28.3, 
+        "carbohydrates": 72.4,
+        "sugars": 2.9, 
+        "salt": 4.7  
+    }
+},
+{
+    "position": "4d",
+    "title": "Mediterrane Tortellini, Kürbisragout",
+    "title_en": "Mediterranean tortellini, pumpkin ragout",
+    "category": "Pasta",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [1.60, 4.50, 6.40],
+    "nutritional_value": {
+        "caloric_content": 816,
+        "proteins": 29.6,
+        "fats": 19,
+        "saturated_fatty_acids": 2.8, 
+        "carbohydrates": 124.7,
+        "sugars": 17.9, 
+        "salt": 3.2  
+    }
+},
+{
+    "position": "4e",
+    "title": "Schwarzwälder Kirschquark",
+    "title_en": "Black Forest cherry curd",
+    "category": "Sweets",
+    "ingredients": ["milk"],
+    "photo": "img/meat.jpg",
+    "prices": [0.80, 1.30, 1.70],
+    "nutritional_value": {
+        "caloric_content": 328,
+        "proteins": 14.8,
+        "fats": 14,
+        "saturated_fatty_acids": 9.5, 
+        "carbohydrates": 34.5,
+        "sugars": 33.4, 
+        "salt": 0.2  
+    }
+},
+{
+    "position": "5a",
+    "title": "Gebackenes Schollenfilet, Speckstippe, hausgemachter Kartoffelsalat",
+    "title_en": "Baked plaice fillet, bacon dip, homemade potato salad",
+    "category": "Meat",
+    "ingredients": ["pork","gluten","milk"],
+    "photo": "img/meat.jpg",
+    "prices": [2.50, 6.50, 8.10],
+    "nutritional_value": {
+        "caloric_content": 1118,
+        "proteins": 43,
+        "fats": 84.6,
+        "saturated_fatty_acids": 12.9, 
+        "carbohydrates": 44.8,
+        "sugars": 9.3, 
+        "salt": 3.8  
+    }
+},
+{
+    "position": "5b",
+    "title": "Gemüse-Kichererbsen-Curry, pflanzlicher Schnittlauchdip, Salzkartoffeln",
+    "title_en": "Vegetable chickpea curry, plant-based chive dip, boiled potatoes",
+    "category": "Vegan",
+    "ingredients": ["vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [3.00, 6.30, 7.10],
+    "nutritional_value": {
+        "caloric_content": 496,
+        "proteins": 11.5,
+        "fats": 23.4,
+        "saturated_fatty_acids": 11.9, 
+        "carbohydrates": 54.6,
+        "sugars": 7.7, 
+        "salt": 1.7  
+    }
+},
+{
+    "position": "5c",
+    "title": "Sweet Onion Burger, Pfeffermayo, Kartoffeltwister",
+    "title_en": "Sweet onion burger, plant-based pepper mayo, potato twister",
+    "category": "Evergreens",
+    "ingredients": ["gluten","alcohol","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [4.00, 7.00, 8.90],
+    "nutritional_value": {
+        "caloric_content": 1050,
+        "proteins": 35.7,
+        "fats": 42.7,
+        "saturated_fatty_acids": 5, 
+        "carbohydrates": 122.6,
+        "sugars": 23.4, 
+        "salt":6.6  
+    }
+},
+{
+    "position": "5d",
+    "title": "Hausgemachte Gnocchi, Pflanzlicher Rahmspitzkohl",
+    "title_en": "Homemade gnocchi, creamed cabbage",
+    "category": "Pasta",
+    "ingredients": ["gluten","vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [1.60, 4.00, 6.90],
+    "nutritional_value": {
+        "caloric_content": 593,
+        "proteins": 16.7,
+        "fats": 8.7,
+        "saturated_fatty_acids": 1, 
+        "carbohydrates": 102,
+        "sugars": 5.9, 
+        "salt":0.9  
+    }
+},
+{
+    "position": "5e",
+    "title": "pflanzlicher Schokopudding",
+    "title_en": "plant-based chocolate pudding",
+    "category": "Sweets",
+    "ingredients": ["vegan"],
+    "photo": "img/meat.jpg",
+    "prices": [0.80, 1.30, 1.80],
+    "nutritional_value": {
+        "caloric_content": 280,
+        "proteins": 2.4,
+        "fats": 11.2,
+        "saturated_fatty_acids": 1.5, 
+        "carbohydrates": 41.8,
+        "sugars": 30.8, 
+        "salt":0.5  
     }
 }
 ]

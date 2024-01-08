@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Gabarito&display=swap');
 
 body {
-    margin-top: 10px;
     font-family: 'Gabarito', sans-serif;
+    overflow: hidden;
 }
 
 .menu 		{ 
@@ -357,9 +357,10 @@ END LOGIN AREA
         'c 		meal-container 	meal-container 	meal-container-reduced 	meal-container-reduced 	meal-container-reduced 		sidebar'
         'd 		meal-container 	meal-container 	meal-container-reduced 	meal-container-reduced 	meal-container-reduced 		sidebar'
         'e 		meal-container 	meal-container 	meal-container-reduced 	meal-container-reduced 	meal-container-reduced		sidebar';
-    grid-template-columns: 40px 300px repeat(5, 150px);
+        grid-template-columns: 40px 300px repeat(5, 150px);
     grid-template-rows: 50px 30px repeat(5, 1fr);
     gap: 2px;
+
 }
 
 .day1 { 
