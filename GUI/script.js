@@ -23,7 +23,7 @@ var RDI = {
     sugar: "#cf3699"
   };
 
-  var splitactive = false;
+  var splitactive = true;
   
 
 
@@ -96,6 +96,7 @@ function updateFields(data, init) {
                 // Set any additional attributes or styles if needed
                 imgElement.alt = ingredient;
                 imgElement.width = 20; // Set the width of the icon
+                imgElement.title = ingredient;
         
                 // Append the img element to the container
                 targetDiv_ingredients.appendChild(imgElement);
@@ -476,6 +477,7 @@ function splitscreen() {
         document.getElementById("iframe").style.position = "absolute";
         document.getElementById("iframe").style.top = 0; 
         document.getElementById("iframe").style.right = 0;
+        document.getElementById("iframe").style.backgroundColor = "red";
     } else {
         document.getElementById("iframe").style.width = "0%";
         document.getElementById("iframe").style.height = "0%"; 
@@ -517,12 +519,12 @@ window.addEventListener("resize", function() {
 window.addEventListener("load", function() { 
     console.log("load")
     if (splitactive) {
-        if (document.getElementById("iframe").style.width != "50%") {
+         if (document.getElementById("iframe").style.width != "50%") {
             console.log("iframewidth: " + document.getElementById("iframe").style.width)
             splitscreen();
         } else {
             scaleDisplay(0.5);
-        }
+        } 
     } else {
         scaleDisplay(1.0);
     } 
