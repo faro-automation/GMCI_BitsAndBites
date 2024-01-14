@@ -5,6 +5,8 @@
     "title_en": "Chicken Curry with Rice",
     "category": "Meat",
     "ingredients": ["poultry", "gluten", "milk"],
+    "ingredients_string":["Reis","Kokosmilch","Erbsen","Brokkoli","Tomaten"],
+    "allergens": ["Gluten","Milch","Kokos"],
     "photo": "img/meat.jpg",
     "prices": [3.20, 5.80, 6.20],
     "nutritional_value": {
@@ -24,6 +26,8 @@
     "title_en": "Chili sin Carne with Rice",
     "category": "Vegan",
     "ingredients": ["vegan", "gluten"],
+    "ingredients_string":["Reis", "Tomaten", "Linsen", "Mais","Bohnen","Chili"],
+    "allergens": ["Gluten"],
     "photo": "img/vegan.jpg",
     "prices": [3.00, 5.40, 6.00],
     "nutritional_value": {
@@ -39,10 +43,12 @@
 
 {
     "position": "1c",
-    "title": "Schweinschnitzel mit Pommes",
-    "title_en": "Pork Schnitzel with French Fries",
+    "title": "Schnitzel mit Pommes",
+    "title_en": "Schnitzel with French Fries",
     "category": "Evergreens",
-    "ingredients": ["pork"],
+    "ingredients": ["pork","gluten"],
+    "ingredients_string":["Kartoffeln", "Schweinefleisch", "Weizen"],
+    "allergens": "Gluten",
     "photo": "img/evergreens.jpeg",
     "prices": [4.20, 6.80, 7.40],
     "nutritional_value": {
@@ -62,6 +68,8 @@
     "title_en": "Spaghetti Bolognese",
     "category": "Pasta",
     "ingredients": ["pork", "gluten"],
+    "ingredients_string":["Hartweizengries","Tomaten","Schweinefleisch"],
+    "allergens": "Gluten",
     "photo": "img/pasta.jpg",
     "prices": [1.60, 3.70, 4.10],
     "nutritional_value": {
@@ -77,10 +85,12 @@
 
 {
     "position": "1e",
-    "title": "Vanillepudding mit Schokoladensauce",
-    "title_en": "Vanilla Pudding with Chocolate Dressing",
+    "title": "Vanillepudding mit Sauce",
+    "title_en": "Vanilla Pudding with Sauce",
     "category": "Sweets",
     "ingredients": ["milk", "gluten"],
+    "ingredients_string":["Milch", "Schokolade","Vanille"],
+    "allergens": ["Gluten","Milch"],
     "photo": "img/sweets.jpg",
     "prices": [0.80, 1.50, 2.00],
     "nutritional_value": {
@@ -99,7 +109,9 @@
     "title": "Rinderrouladen",
     "title_en": "Rinderrouladen",
     "category": "Meat",
-    "ingredients": ["beef"],
+    "ingredients": ["beef","gluten"],
+    "ingredients_string":["Rindfleisch","Sauregurken","Kartoffeln"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [3.20, 5.80, 6.20],
     "nutritional_value": {
@@ -113,10 +125,12 @@
     }
 },{
     "position": "2b",
-    "title": "Salatteller, hausgemachtes pflanzliches cremiges Dressing, Vegane Nuggets, Chili Jam, Weizenbaguette",
-    "title_en": "Salad plate, homemade plant-based creamy dressing, vegan nuggets, chili jam, wheat baguette",
+    "title": "Salatteller mit Vegane Nuggets",
+    "title_en": "Salad plate with vegan nuggets",
     "category": "Vegan",
     "ingredients": ["gluten","mustard","vegan"],
+    "ingredients_string":["Weizenbaguette", "hausgemachtes Dressing"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [3.00, 6.30, 7.90],
     "nutritional_value": {
@@ -131,10 +145,12 @@
 },
 {
     "position": "2c",
-    "title": "Hausgemachte Pizza mit Brokkoli und Hollandaise",
-    "title_en": "Homemade pizza with broccoli and hollandaise",
+    "title": "Hausgemachte Pizza mit Brokkoli",
+    "title_en": "Homemade pizza with broccoli",
     "category": "Evergreens",
     "ingredients": ["gluten","milk"],
+    "ingredients_string":["Weizenteig","Hollandaise", "Tomaten"],
+    "allergens": ["Gluten", "Milch"],
     "photo": "img/meat.jpg",
     "prices": [4.95, 6.90, 7.90],
     "nutritional_value": {
@@ -149,10 +165,12 @@
 },
 {
     "position": "2d",
-    "title": "Hausgemachte Pasta, alla Norma",
-    "title_en": "Homemade pasta, alla Norma",
+    "title": "Pasta, alla Norma",
+    "title_en": "Pasta, alla Norma",
     "category": "Pasta",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Hausgemachte Pasta", "Tomaten"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [4.95, 6.90, 6.40],
     "nutritional_value": {
@@ -167,10 +185,12 @@
 },
 {
     "position": "2e",
-    "title": "Weiße Schokoladen-Orangen-Quarkspeise mit Früchten",
-    "title_en": "White chocolate-orange-curd dessert with fruit",
+    "title": "Quarkspeise mit Früchten",
+    "title_en": "Curd-Dessert with fruit",
     "category": "Sweets",
     "ingredients": ["milk"],
+    "ingredients_string":["Schokolade","Orangen","Früchte"],
+    "allergens": "Milch",
     "photo": "img/meat.jpg",
     "prices": [0.80, 1.30, 1.70],
     "nutritional_value": {
@@ -189,6 +209,8 @@
     "title_en": "Baked pork ham, gravy, savoy cabbage, rösti",
     "category": "Meat",
     "ingredients": ["pork","beef","alcohol"],
+    "ingredients_string":["Bratensauce","Wiesng","Rösti"],
+    "allergens": "Knoblauch",
     "photo": "img/meat.jpg",
     "prices": [3.20, 6.50, 8.10],
     "nutritional_value": {
@@ -203,10 +225,12 @@
 },
 {
     "position": "3b",
-    "title": "Rote Bete-Bulgur Frikadelle, Schnittlauchsauce, Blumenkohl, Salzkartoffeln",
-    "title_en": "Beet-bulgur-meatball, chive sauce, cauliflower, boiled potatoes",
+    "title": "Rote Bete-Bulgur Frikadelle",
+    "title_en": "Beet-bulgur-meatball",
     "category": "Vegan",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Schnittlauchsauce", "Blumenkohl", "Salzkartoffeln"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [3.00, 6.30, 7.90],
     "nutritional_value": {
@@ -221,10 +245,12 @@
 },
 {
     "position": "3c",
-    "title": "Marinierte Hähnchenprust, Barbecesauce, Mais, Kräuterreis",
-    "title_en": "Marinated chicken breast, barbecue sauce, corn, herb rice",
+    "title": "Marinierte Hähnchenprust",
+    "title_en": "Marinated chicken breast",
     "category": "Evergreens",
     "ingredients": ["poultry","gluten","milk"],
+    "ingredients_string":["Barbecesauce", "Mais", "Kräuterreis"],
+    "allergens": ["Gluten","Milch"],
     "photo": "img/meat.jpg",
     "prices": [2.50, 6.50, 8.10],
     "nutritional_value": {
@@ -239,10 +265,12 @@
 },
 {
     "position": "3d",
-    "title": "Hausgemachte Pasta, Brokkoli-Mandel-Sauce",
-    "title_en": "Homemade pasta, broccoli and almond sauce",
+    "title": "Pasta mit Sauce",
+    "title_en": "Pasta with sauce",
     "category": "Pasta",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Brokkoli", "Mandeln"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [1.60, 4.50, 6.40],
     "nutritional_value": {
@@ -257,10 +285,12 @@
 },
 {
     "position": "3e",
-    "title": "Chia-Pudding, Pfirsich-Maracuja-Kompott",
-    "title_en": "Chia pudding, peach and passion fruit compote",
+    "title": "Chia-Pudding",
+    "title_en": "Chia pudding",
     "category": "Sweets",
     "ingredients": ["vegan"],
+    "ingredients_string":["Pfirsich-Maracuja-Kompott","Kokosmilch"],
+    "allergens": "Kokos",
     "photo": "img/meat.jpg",
     "prices": [0.80, 1.30, 1.70],
     "nutritional_value": {
@@ -275,10 +305,12 @@
 },
 {
     "position": "4a",
-    "title": "Rindergulasch mit Paprika und Champignons, Hasugemachte Pasta",
-    "title_en": "Beef goulash with peppers and mushrooms, homemade pasta",
+    "title": "Rindergulasch",
+    "title_en": "Beef goulash",
     "category": "Meat",
     "ingredients": ["beef","gluten","alcohol"],
+    "ingredients_string":["Paprika", "Champignons","Hausgemachte Pasta"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [3.20, 6.50, 8.10],
     "nutritional_value": {
@@ -293,10 +325,12 @@
 },
 {
     "position": "4b",
-    "title": "Falafel, scharfe Tomatensauce, mediteranes Gemüse, Dattel Couscous",
-    "title_en": "Falafel, spicy tomato sauce, mediterranean vegetables, date couscous",
+    "title": "Falafel mit Couscous",
+    "title_en": "Falafel with couscous",
     "category": "Vegan",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Tomaten","Zucchini","Dattel"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [2.50, 6.30, 7.90],
     "nutritional_value": {
@@ -311,10 +345,12 @@
 },
 {
     "position": "4c",
-    "title": "Frisches Putenschnitzel, Chili-Hollandaise, Pommes frites",
-    "title_en": "Fresh turkey escalope, chili hollandaise, French fries",
+    "title": "FPutenschnitzel",
+    "title_en": "Turkey escalope",
     "category": "Evergreens",
     "ingredients": ["gluten","milk","poultry"],
+    "ingredients_string":["Chili-Hollandaise","Pommes frites"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [4.20, 6.00, 7.80],
     "nutritional_value": {
@@ -329,10 +365,12 @@
 },
 {
     "position": "4d",
-    "title": "Mediterrane Tortellini, Kürbisragout",
-    "title_en": "Mediterranean tortellini, pumpkin ragout",
+    "title": "Mediterrane Tortellini",
+    "title_en": "Mediterranean tortellini",
     "category": "Pasta",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Kürbisragout"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [1.60, 4.50, 6.40],
     "nutritional_value": {
@@ -351,6 +389,8 @@
     "title_en": "Black Forest cherry curd",
     "category": "Sweets",
     "ingredients": ["milk"],
+    "ingredients_string":["Kirschen","Schokolade"],
+    "allergens": "Milch",
     "photo": "img/meat.jpg",
     "prices": [0.80, 1.30, 1.70],
     "nutritional_value": {
@@ -365,10 +405,12 @@
 },
 {
     "position": "5a",
-    "title": "Gebackenes Schollenfilet, Speckstippe, hausgemachter Kartoffelsalat",
-    "title_en": "Baked plaice fillet, bacon dip, homemade potato salad",
+    "title": "Gebackenes Schollenfilet",
+    "title_en": "Baked plaice fillet",
     "category": "Meat",
     "ingredients": ["pork","gluten","milk"],
+    "ingredients_string":["Speckstippe","hausgemachter Kartoffelsalat"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [2.50, 6.50, 8.10],
     "nutritional_value": {
@@ -383,10 +425,12 @@
 },
 {
     "position": "5b",
-    "title": "Gemüse-Kichererbsen-Curry, pflanzlicher Schnittlauchdip, Salzkartoffeln",
-    "title_en": "Vegetable chickpea curry, plant-based chive dip, boiled potatoes",
+    "title": "Gemüse-Kichererbsen-Curry ",
+    "title_en": "Vegetable chickpea curry",
     "category": "Vegan",
     "ingredients": ["vegan"],
+    "ingredients_string":["pflanzlicher Schnittlauchdip","Salzkartoffeln"],
+    "allergens": "",
     "photo": "img/meat.jpg",
     "prices": [3.00, 6.30, 7.10],
     "nutritional_value": {
@@ -401,10 +445,12 @@
 },
 {
     "position": "5c",
-    "title": "Sweet Onion Burger, Pfeffermayo, Kartoffeltwister",
-    "title_en": "Sweet onion burger, plant-based pepper mayo, potato twister",
+    "title": "Sweet Onion Burger",
+    "title_en": "Sweet onion burger",
     "category": "Evergreens",
     "ingredients": ["gluten","alcohol","vegan"],
+    "ingredients_string":["Pfeffermayo", "Kartoffeltwister"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [4.00, 7.00, 8.90],
     "nutritional_value": {
@@ -419,10 +465,12 @@
 },
 {
     "position": "5d",
-    "title": "Hausgemachte Gnocchi, Pflanzlicher Rahmspitzkohl",
-    "title_en": "Homemade gnocchi, creamed cabbage",
+    "title": "Hausgemachte Gnocchi",
+    "title_en": "Homemade gnocchi",
     "category": "Pasta",
     "ingredients": ["gluten","vegan"],
+    "ingredients_string":["Pflanzlicher Rahmspitzkohl"],
+    "allergens": "Gluten",
     "photo": "img/meat.jpg",
     "prices": [1.60, 4.00, 6.90],
     "nutritional_value": {
@@ -441,6 +489,8 @@
     "title_en": "plant-based chocolate pudding",
     "category": "Sweets",
     "ingredients": ["vegan"],
+    "ingredients_string":["Kokosmilch","Schokolade"],
+    "allergens": "Kokos",
     "photo": "img/meat.jpg",
     "prices": [0.80, 1.30, 1.80],
     "nutritional_value": {
