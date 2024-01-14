@@ -205,8 +205,8 @@
 },
 {
     "position": "3a",
-    "title": "Backschinken vom Schwein, Bratensauce, Wirsing, Rösti",
-    "title_en": "Baked pork ham, gravy, savoy cabbage, rösti",
+    "title": "Backschinken",
+    "title_en": "Baked pork ham",
     "category": "Meat",
     "ingredients": ["pork","beef","alcohol"],
     "ingredients_string":["Bratensauce","Wiesng","Rösti"],
