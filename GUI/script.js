@@ -175,7 +175,6 @@ function updateFields(data, init) {
 
 }
 
-
 /* SIDEBAR BEGIN */
 
 function openNav(posSearch) {
@@ -562,29 +561,11 @@ function reverseMapValues(value) {
     }
 }
 
-
-function splitscreen() {
-    console.log("splitscreen")
-    splitactive = False;
-     if (splitactive) {
-        scaleDisplay(0.5)
-        document.getElementById("iframe").style.width = "50%";
-        document.getElementById("iframe").style.height = "100%";
-        document.getElementById("iframe").style.position = "absolute";
-        document.getElementById("iframe").style.top = 0; 
-        document.getElementById("iframe").style.right = 0;
-        document.getElementById("iframe").style.backgroundColor = "red";
-    } else {
-        document.getElementById("iframe").style.width = "0%";
-        document.getElementById("iframe").style.height = "0%"; 
-        scaleDisplay(1.0)
-    } 
-}
-
+// this function scales the grid container to a multiple of screenwidth
 function scaleDisplay(widthfactor) {
     var toFullWidth = true;
     widthfactor = parseFloat(widthfactor);
-    if (widthfactor > 0.0) {
+    if (widthfactor > 0.0 && window.innerWidth > (screen.width/2)) {
         var screenWidth = window.innerWidth * widthfactor;
     } else {
         var screenWidth = window.innerWidth;
@@ -598,34 +579,35 @@ function scaleDisplay(widthfactor) {
         var scale = Math.min((screenWidth / containerWidth), (screenHeight / containerHeight));
     }
     document.getElementById("grid-container").style.transform = "scale(" + scale + ")"; 
-    var widthCorrection = ((containerWidth * scale  - containerWidth) /2) +10;
-    var heightCorrection = ((containerHeight * scale - containerHeight) /2) +10;
+    var widthCorrection = ((containerWidth * scale  - containerWidth) /2) +20;
+    var heightCorrection = ((containerHeight * scale - containerHeight) /2) +20;
     document.getElementById("grid-container").style.position = "absolute";
     document.getElementById("grid-container").style.top = heightCorrection + "px"; // Set the top position relative to the window
     document.getElementById("grid-container").style.left = widthCorrection + "px"; // Set the left position relative to the window
     console.log("sw " + screenWidth + " sh " + screenHeight +  " s " + scale +  " w " + widthfactor + " ifr " + document.getElementById("iframe").style.width);
-}   
-window.addEventListener("resize", function() { 
-    console.log("resize")
-    if (splitactive) {
-    } else {
-        scaleDisplay(1.0); 
-    } 
-    });    
-window.addEventListener("load", function() { 
-    console.log("load")
-    if (splitactive) {
-         if (document.getElementById("iframe").style.width != "50%") {
-            console.log("iframewidth: " + document.getElementById("iframe").style.width)
-            splitscreen();
-        } else {
-            scaleDisplay(0.5);
-        } 
-    } else {
-        scaleDisplay(1.0);
-    } 
-});
+}  
 
+window.addEventListener("resize", function(event) { 
+    if (event.target === window) {
+        console.log("resize")
+        if (splitactive) {
+            scaleDisplay(0.5);
+        } else {
+            scaleDisplay(1.0); 
+        } 
+    }
+});     
+
+ window.addEventListener("load", function() { 
+        console.log("load");
+        if (splitactive) {
+            document.getElementById("iframe").style.visibility = 'visible';
+            scaleDisplay(0.5);
+        } else {
+            document.getElementById("iframe").style.visibility = 'hidden';
+            scaleDisplay(1.0);
+        } 
+}, false); 
 
 
 
