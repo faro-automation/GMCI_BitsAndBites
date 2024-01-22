@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles_multi.css">
+    <title>Mensa Speiseplan</title>
+</head>
+<body>
+
+	
+	<div class="everything" id="everything">
+		<div class="grid-container" id="grid-container">
+			<!-- Creating a 6x8 grid -->
+			<!-- You can customize the content of each grid item as needed -->
+			<div class="menu">
+				<!-- <img src="interface/hamburger_icon.png"> -->
+			</div>
+			<div class="filter">
+				<div class="filter-bar">
+					<div class="label-section">
+						<span>Filter:</span>
+					</div>
+					<div class="filter-section filters-section" id="selectedFilters">
+						<!-- Filters will be dynamically added here -->
+					</div>
+					<div class="filter-section buttons-section">
+						<button onclick="showFilterPopup()" class = "filter-bar-button">+</button>
+						<button onclick="clearAllFilters()" class = "filter-bar-button">×</button>
+					</div>
+				</div>
+				
+				<div class="filter-popup" id="filterPopup">
+					<div id = "popup-close"><a href = "#" onclick="closeWindow('filterPopup')">×</a></div>
+					<label><input type="checkbox" value="pork"> ohne Schweinfleisch</label>
+					<label><input type="checkbox" value="milk"> ohne Milch</label>
+					<label><input type="checkbox" value="gluten"> ohne Gluten</label>
+					<button onclick="applyFilters()" id = "apply-button">Filter anwenden</button>
+					<button onclick="clearAllFilters()" id = "reset-button">Filter zurücksetzen</button>
+	
+				</div>
+				<div class = "visitors-bar">
+					<div id = "visitors-label">Besucher:</div> 
+					<div id = "visitors-number"> 45/120</div> 
+				</div>
+				<div class = "prices-dropdown-bar">Preise: 
+					<div class="dropdown" style = "margin-left: 10px;">
+
+						<div class="language-selector" onclick="toggleDropdown('pricesDropdown')">
+							<a href="#" id = "prices-main">Alle</a>   
+							<img src="interface/dropdown.svg" class = "dropdown-arrow">
+						</div>
+					
+						<div class="dropdown-content" id="pricesDropdown">
+							<a href="#" onclick="changePrices('all')">
+								Alle
+							</a>
+							<a href="#" onclick="changePrices('students')">
+								Studierende
+							</a>
+							<a href="#" onclick="changePrices('staff')">
+								Bedienstete
+							</a>
+							<a href="#" onclick="changePrices('guests')">
+								Gäste
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="language">
+				<div class="dropdown">
+
+					<div class="language-selector" onclick="toggleDropdown('languageDropdown')">
+						<div class="flag"><img src="interface/de.png" id = "flag-main"> </div>
+						<a href="#" id = "lang-main">Deutsch</a>   
+						<img src="interface/dropdown.svg" class = "dropdown-arrow">
+					</div>
+				
+					<div class="dropdown-content" id="languageDropdown">
+						<a href="#" onclick="changeLanguage('en')">
+							<div class="flag">
+								<img src="interface/en.png" alt="Flag">
+							</div>
+							English
+						</a>
+						<a href="#" onclick="changeLanguage('de')">
+							<div class="flag">
+								<img src="interface/de.png" alt="Flag">
+							</div>
+							Deutsch
+						</a>
+						<a href="#" onclick="changeLanguage('multi')">
+							<div class="flag">
+								<img src="interface/multilang.png" alt="Flag">
+							</div>
+							Multilang
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="login">
+				<div class="login-button">
+					<a href = "#" id="login-label">Anmelden</a>
+				</div>
+			</div>
+			
+			<div id="day1">Mo</div>
+			<div id="day2">Di</div>
+			<div id="day3">Mi</div>
+			<div id="day4">Do</div>
+			<div id="day5">Fr</div>
+			
+			<div class="a">meat</div>
+			<div class="b">vegan</div>
+			<div class="c">schnitzel</div>
+			<div class="d">pasta</div>
+			<div class="e">sweets</div>
+			
+			<div class="meal1a">
+				<div class="meal-container 1a" id = "meats">
+
+					<div class = "meal-photo-container">
+						<img src="img/pasta.jpg" class="meal-photo 1a">
+					</div>
+					
+					<div class="meal-ingredients 1a">
+					</div>
+			
+					<div class="meal-title 1a">Title 1a</div>
+					<div class="meal-prices 1a">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 1a">
+									<div class="number 1a">0</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+						<button class="info-button" onclick="openNav('1a')"></button>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+			<div class="meal2a">
+				<div class="meal-container-reduced 2a" id = "meats">
+					<div class="meal-ingredients 2a">
+					</div>
+			
+					<div class="meal-title 2a">Title 2a</div>
+					<div class="meal-prices 2a">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 2a">
+										<div class="bar 2a">
+											<div class="number 2a">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('2a')"></button>
+					</div>
+
+				</div>
+				
+			</div>
+			<div class="meal3a">
+				<div class="meal-container-reduced 3a" id = "meats">
+					<div class="meal-ingredients 3a">
+					</div>
+			
+					<div class="meal-title 3a">Title 3a</div>
+					<div class="meal-prices 3a">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 3a">
+										<div class="bar 3a">
+											<div class="number 3a">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('3a')"></button>
+					</div>
+					
+				</div>
+			</div>
+			<div class="meal4a">
+				<div class="meal-container-reduced 4a" id = "meats">
+					<div class="meal-ingredients 4a">
+					</div>
+			
+					<div class="meal-title 4a">Title 4a</div>
+					<div class="meal-prices 4a">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 4a">
+										<div class="bar 4a">
+											<div class="number 4a">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('4a')"></button>
+					</div>
+					
+				</div>
+			</div>
+			<div class="meal5a">
+				<div class="meal-container-reduced 5a" id = "meats">
+					<div class="meal-ingredients 5a">
+					</div>
+			
+					<div class="meal-title 5a">Title 5a</div>
+					<div class="meal-prices 5a">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 5a">
+										<div class="bar 5a">
+											<div class="number 5a">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('5a')"></button>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="meal1b">
+				<div class="meal-container 1b" id = "vegan">
+
+					<div class = "meal-photo-container">
+						<img src="img/pasta.jpg" class="meal-photo 1b">
+					</div>
+					
+					<div class="meal-ingredients 1b">
+					</div>
+			
+					<div class="meal-title 1b">Title 1b</div>
+					<div class="meal-prices 1b">Price</div>
+			
+					<div class="meal-nutrition 1b">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 1b">
+										<div class="bar 1b">
+											<div class="number 1b">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+						<button class="info-button" onclick="openNav('1b')"></button>
+					</div>
+					
+				</div>
+			</div>
+			<div class="meal2b">
+				<div class="meal-container-reduced 2b" id = "meats">
+					<div class="meal-ingredients 2b">
+					</div>
+			
+					<div class="meal-title 2b">Title 2b</div>
+					<div class="meal-prices 2b">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 2b">
+										<div class="bar 2b">
+											<div class="number 2b">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('2b')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal3b">
+				<div class="meal-container-reduced 3b" id = "meats">
+					<div class="meal-ingredients 3b">
+					</div>
+			
+					<div class="meal-title 3b">Title 3b</div>
+					<div class="meal-prices 3b">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 3b">
+										<div class="bar 3b">
+											<div class="number 3b">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('3b')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal4b">
+				<div class="meal-container-reduced 4b" id = "meats">
+					<div class="meal-ingredients 4b">
+					</div>
+			
+					<div class="meal-title 4b">Title 4b</div>
+					<div class="meal-prices 4b">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 4b">
+										<div class="bar 4b">
+											<div class="number 4b">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('4b')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal5b">
+				<div class="meal-container-reduced 5b" id = "meats">
+					<div class="meal-ingredients 5b">
+					</div>
+			
+					<div class="meal-title 5b">Title 5b</div>
+					<div class="meal-prices 5b">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 5b">
+										<div class="bar 5b">
+											<div class="number 5b">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('5b')"></button>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="meal1c">
+				<div class="meal-container 1c" id = "evergreens">
+
+					<div class = "meal-photo-container">
+						<img src="img/pasta.jpg" class="meal-photo 1c">
+					</div>
+					
+					<div class="meal-ingredients 1c">
+					</div>
+			
+					<div class="meal-title 1c">Title 1c</div>
+					<div class="meal-prices 1c">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 1c">
+										<div class="bar 1c">
+											<div class="number 1c">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+						<button class="info-button" onclick="openNav('1c')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal2c">
+				<div class="meal-container-reduced 2c" id = "meats">
+					<div class="meal-ingredients 2c">
+					</div>
+			
+					<div class="meal-title 2c">Title 2c</div>
+					<div class="meal-prices 2c">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 2c">
+										<div class="bar 2c">
+											<div class="number 2c">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('2c')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal3c">
+				<div class="meal-container-reduced 3c" id = "meats">
+					<div class="meal-ingredients 3c">
+					</div>
+			
+					<div class="meal-title 3c">Title 3c</div>
+					<div class="meal-prices 3c">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 3c">
+										<div class="bar 3c">
+											<div class="number 3c">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('3c')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal4c">
+				<div class="meal-container-reduced 4c" id = "meats">
+					<div class="meal-ingredients 4c">
+					</div>
+			
+					<div class="meal-title 4c">Title 4c</div>
+					<div class="meal-prices 4c">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 4c">
+										<div class="bar 4c">
+											<div class="number 4c">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('4c')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal5c">
+				<div class="meal-container-reduced 5c" id = "meats">
+					<div class="meal-ingredients 5c">
+					</div>
+			
+					<div class="meal-title 5c">Title 5c</div>
+					<div class="meal-prices 5c">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 5c">
+										<div class="bar 5c">
+											<div class="number 5c">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('5c')"></button>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="meal1d">
+				<div class="meal-container 1d" id = "pasta">
+
+					<div class = "meal-photo-container">
+					<img src="img/pasta.jpg" class="meal-photo 1d">
+					</div>
+					
+					<div class="meal-ingredients 1d">
+					</div>
+			
+					<div class="meal-title 1d">Title 1d</div>
+					<div class="meal-prices 1d">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 1d">
+										<div class="bar 1d">
+											<div class="number 1d">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+						<button class="info-button" onclick="openNav('1d')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal2d">
+				<div class="meal-container-reduced 2d" id = "meats">
+					<div class="meal-ingredients 2d">
+					</div>
+			
+					<div class="meal-title 2d">Title 2d</div>
+					<div class="meal-prices 2d">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 2d">
+										<div class="bar 2d">
+											<div class="number 2d">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('2d')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal3d">
+				<div class="meal-container-reduced 3d" id = "meats">
+					<div class="meal-ingredients 3d">
+					</div>
+			
+					<div class="meal-title 3d">Title 3d</div>
+					<div class="meal-prices 3d">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 3d">
+										<div class="bar 3d">
+											<div class="number 3d">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('3d')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal4d">
+				<div class="meal-container-reduced 4d" id = "meats">
+					<div class="meal-ingredients 4d">
+					</div>
+			
+					<div class="meal-title 4d">Title 4d</div>
+					<div class="meal-prices 4d">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 4d">
+										<div class="bar 4d">
+											<div class="number 4d">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('4d')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal5d">
+				<div class="meal-container-reduced 5d" id = "meats">
+					<div class="meal-ingredients 5d">
+					</div>
+			
+					<div class="meal-title 5d">Title 5d</div>
+					<div class="meal-prices 5d">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 5d">
+										<div class="bar 5d">
+											<div class="number 5d">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('5d')"></button>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="meal1e">
+				<div class="meal-container 1e" id = "sweets">
+
+									<div class = "meal-photo-container">
+						<img src="img/pasta.jpg" class="meal-photo 1e">
+					</div>
+					
+					<div class="meal-ingredients 1e">
+					</div>
+			
+					<div class="meal-title 1e">Title 1e</div>
+					<div class="meal-prices 1e">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 1e">
+										<div class="bar 1e">
+											<div class="number 1e">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+						<button class="info-button" onclick="openNav('1e')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal2e">
+				<div class="meal-container-reduced 2e" id = "meats">
+					<div class="meal-ingredients 2e">
+					</div>
+			
+					<div class="meal-title 2e">Title 2e</div>
+					<div class="meal-prices 2e">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 2e">
+										<div class="bar 2e">
+											<div class="number 2e">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('2e')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal3e">			
+				<div class="meal-container-reduced 3e" id = "meats">
+				<div class="meal-ingredients 3e">
+				</div>
+		
+				<div class="meal-title 3e">Title 3e</div>
+				<div class="meal-prices 3e">Price</div>
+		
+				<div class="meal-nutrition">
+					<div>
+		
+						<div class="circle-container">
+							<div class="circle 3e">
+									<div class="bar 3e">
+										<div class="number 3e">0</div>
+									</div>
+							</div>
+						</div>
+		
+					</div>
+				</div>
+
+				<div class="meal-info-button-container">
+				<button class="info-button" onclick="openNav('3e')"></button>
+				</div>
+
+			</div>
+		</div>
+			<div class="meal4e">
+				<div class="meal-container-reduced 4e" id = "meats">
+					<div class="meal-ingredients 4e">
+					</div>
+			
+					<div class="meal-title 4e">Title 4e</div>
+					<div class="meal-prices 4e">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 4e">
+										<div class="bar 4e">
+											<div class="number 4e">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('4e')"></button>
+					</div>
+
+				</div>
+			</div>
+			<div class="meal5e">
+				<div class="meal-container-reduced 5e" id = "meats">
+					<div class="meal-ingredients 5e">
+					</div>
+			
+					<div class="meal-title 5e">Title 5e</div>
+					<div class="meal-prices 5e">Price</div>
+			
+					<div class="meal-nutrition">
+						<div>
+			
+							<div class="circle-container">
+								<div class="circle 5e">
+										<div class="bar 5e">
+											<div class="number 5e">0</div>
+										</div>
+								</div>
+							</div>
+			
+						</div>
+					</div>
+
+					<div class="meal-info-button-container">
+					<button class="info-button" onclick="openNav('5e')"></button>
+					</div>
+
+				</div>
+			</div>
+			
+			<div class="sidebar">sidebar</div>
+			
+		</div>
+
+		<div id="sidePanel">
+			<div class = "top-row">
+				<div id="expanded-category">category</div>
+				<div id = "back-button">
+					<a href="javascript:void(0)" class="close-btn" onclick="closeNav()">×</a>
+				</div>
+			</div>
+
+			
+			<div class="expanded-top-container">
+
+				<div id="expanded-entry-txt">Eingang</div> 
+				<div class = "expanded-entry-container">
+				<div id="expanded-entry">
+					<div id="expanded-entry-letter">A</div> 
+				</div>
+			</div>
+				<div id="expanded-title">Title</div>
+			</div>
+			
+			<div class="expanded-photo-container">
+				<img id = "expanded-photo" src="img/pasta.jpg">
+			</div>
+			
+			<div class="expanded-ingredients">
+			<b>Zutaten: </b>
+			<div id = "expanded-ingredients-string">--</div>
+			<b>Allergene: </b>
+			<div id = "expanded-allergens-string">--</div>
+			</div>
+			<div class="expanded-prices-container">
+				<div class="expanded-prices" id = "price-students-container">
+					<div id = "students-label">Studierende</div>
+					<div id = "price-students">1,00</div>
+				</div>
+				<div class="expanded-prices" id = "price-staff-container">
+					<div id = "students-label">Bedienstete</div>
+					<div id = "price-staff">2,00</div>
+				</div>
+				<div class="expanded-prices" id = "price-guests-container">
+					<div id = "students-label">Gäste</div>
+					<div id = "price-guests">3,00</div>
+				</div>
+			</div>
+
+			<b>Nährwerte (bezogen auf RDA) </b>
+			<div class="expanded-nutrition">
+				
+				<div class="circle-container-large" id = "kcal">
+					<div class="circle-large-kcal">
+						<div class="num-label-large-kcal">1000</div>
+					</div>
+					<div class="label-large-kcal" id = "kcal-label">kkal</div>
+				</div>
+
+				<div class="circle-container-large" id = "proteins">
+					<div class="circle-large proteins">
+						<div class="num-label-large proteins">0g</div>
+					</div>
+					<div class="label-large" id = "protein-label">Eiweiß</div>
+				</div>
+
+				<div class="circle-container-large" id = "fats">
+					<div class="circle-large fats">
+						<div class="num-label-large fats">0g</div>
+					</div>
+					<div class="label-large" id = "fats-label">Fette</div>
+				</div>
+
+				<div class="circle-container-large" id = "saturated-fats">
+					<div class="circle-large saturated-fats">
+						<div class="num-label-large saturated-fats">0g</div>
+					</div>
+					<div class="label-large" id = "saturated-fats-label">davon gesättigte Fettsäure</div>
+				</div>
+
+				<div class="circle-container-large" id = "carbs">
+					<div class="circle-large carbs">
+						<div class="num-label-large carbs">0g</div>
+					</div>
+					<div class="label-large" id = "carbs-label">Kohlen-hydrate</div>
+				</div>
+
+				<div class="circle-container-large" id = "sugar">
+					<div class="circle-large sugar">
+						<div class="num-label-large sugar">0g</div>
+					</div>
+					<div class="label-large" id = "sugar-label">davon Zucker</div>
+				</div>
+
+				<div class="circle-container-large" id = "salt">
+					<div class="circle-large salt">
+						<div class="num-label-large salt">0g</div>
+					</div>
+					
+					<div class="label-large" id = "salt-label">Salz</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+		<iframe id="iframe" width=100% height=100% src="#everything" frameborder="0"></iframe> 
+
+	<script src="script.js"></script>
+	  
+</body>
+</html>
